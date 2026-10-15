@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { supabase, GRADES } from '@/lib/supabase';
+import { createClient, GRADES } from '@/utils/supabase/client';
 import slidesData from '@/data/slides.json';
 import { QRCodeSVG } from 'qrcode.react';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
@@ -9,6 +9,7 @@ import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 const SESSION = 'class';
 
 export default function PresentPage() {
+  const supabase = createClient();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showResults, setShowResults] = useState(false);
   const [votes, setVotes] = useState<any[]>([]);
@@ -92,9 +93,6 @@ export default function PresentPage() {
       <div style={{ flex: 1, padding: 24, overflow: 'auto', background: '#fafafa' }}>
         <h2 style={{ marginTop: 0 }}>{slide?.title}</h2>
         <pre style={{ whiteSpace: 'pre-wrap', fontSize: 15 }}>{slide?.content}</pre>
-        {slide?.id >= 18 && slide?.id <= 24 && (
-          <p style={{ color: '#666' }}>[Vehicle photo example - add image to public/images]</p>
-        )}
       </div>
 
       <div style={{ width: 420, padding: 24, borderLeft: '1px solid #ddd', background: '#fff' }}>
