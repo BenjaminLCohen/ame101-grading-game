@@ -1,15 +1,18 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main style={{ padding: 40, fontFamily: 'system-ui', maxWidth: 600 }}>
-      <h1>AME 101 Grading Game</h1>
-      <p>Interactive presentation with live class polling.</p>
-      <ul>
-        <li><Link href="/present">Presenter View</Link> (computer / projector)</li>
-        <li><Link href="/vote">Student View</Link> (or scan QR from presenter)</li>
-      </ul>
-      <p>See README for Supabase setup.</p>
+    <main className="home">
+      <p className="eyebrow">AME 101 · University lecture</p>
+      <h1>Chapter 8, then grade the reports live.</h1>
+      <p className="lede">
+        Project the deck. Students scan in, assign a grade on each example, and stay on the same
+        slide as the room. Results stay sealed until you open them.
+      </p>
+      <div className="home-links">
+        <Link href="/present">Presenter</Link>
+        <Link href="/vote">Student</Link>
+      </div>
     </main>
   );
 }

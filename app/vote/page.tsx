@@ -1,126 +1,195 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { createClient, GRADES } from '@/utils/supabase/client';
-import slidesData from '@/data/slides.json';
-import { useSearchParams } from 'next/navigation';
-
-const SESSION = 'class';
+import { useEffect, useRef, useState } from "react";
+import { createClient, GRADES } from "@/utils/supabase/client";
+import { DeckSlide, slides } from "@/components/DeckSlide";
+import { Bar, BarChart, ResponsiveContainer, XAxis } from "recharts";
 
 export default function VotePage() {
-  const supabase = createClient();
-  const params = useSearchParams();
-  const session = params.get('session') || SESSION;
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [supabase] = useState(() => createClient());
+  const [sessionId, setSessionId] = useState("class");
+  const [studentId, setStudentId] = useState("");
+  const [index, setIndex] = useState(0);
   const [showResults, setShowResults] = useState(false);
-  const [grade, setGrade] = useState('');
+  const [called, setCalled] = useState(false);
+  const [grade, setGrade] = useState("");
   const [volunteer, setVolunteer] = useState(false);
-  const [name, setName] = useState('');
-  const [studentId, setStudentId] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [name, setName] = useState("");
+  const [saved, setSaved] = useState(false);
+  const [error, setError] = useState("");
+  const [counts, setCounts] = useState<{ grade: string; count: number }[]>([]);
+  const dirty = useRef(false);
 
-  const slide = slidesData.slides[currentSlide];
+  const slide = slides[index] ?? slides[0];
 
   useEffect(() => {
-    let id = localStorage.getItem('studentId');
+    const q = new URLSearchParams(window.location.search).get("session");
+    if (q && /^[a-zA-Z0-9_-]{1,40}$/.test(q)) setSessionId(q);
+    let id = localStorage.getItem("ame101-student-id");
     if (!id) {
       id = crypto.randomUUID();
-      localStorage.setItem('studentId', id);
+      localStorage.setItem("ame101-student-id", id);
     }
     setStudentId(id);
+  }, []);
 
+  useEffect(() => {
+    if (!studentId) return;
+    let stop = false;
     const load = async () => {
-      const { data } = await supabase.from('sessions').select('*').eq('id', session).single();
-      if (data) {
-        setCurrentSlide(data.current_slide || 0);
-        setShowResults(data.show_results || false);
-      }
-      const { data: v } = await supabase.from('votes')
-        .select('*')
-        .eq('session_id', session)
-        .eq('slide_id', slidesData.slides[data?.current_slide || 0]?.id)
-        .eq('student_id', id)
+      const { data, error: sessionError } = await supabase
+        .from("sessions")
+        .select("*")
+        .eq("id", sessionId)
         .maybeSingle();
-      if (v) {
-        setGrade(v.grade);
-        setVolunteer(v.volunteer);
-        setName(v.student_name || '');
-        setSubmitted(true);
+      if (sessionError) {
+        if (!stop) setError("Waiting for the class database. Ask the instructor if this stays blank.");
+        return;
       }
-    };
-    load();
-
-    const channel = supabase.channel('vote')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'sessions' }, (payload) => {
-        const d = payload.new as any;
-        if (d) {
-          setCurrentSlide(d.current_slide);
-          setShowResults(d.show_results);
-          setSubmitted(false);
-          setGrade('');
+      if (!data || stop) return;
+      const nextIndex = Math.max(0, Math.min(slides.length - 1, data.current_slide || 0));
+      const nextSlide = slides[nextIndex];
+      setIndex((prev) => {
+        if (prev !== nextIndex) dirty.current = false;
+        return nextIndex;
+      });
+      setShowResults(Boolean(data.show_results));
+      const map = data.selected_volunteers && typeof data.selected_volunteers === "object"
+        ? (data.selected_volunteers as Record<string, string[]>)
+        : {};
+      const list = Array.isArray(map[String(nextSlide.id)]) ? map[String(nextSlide.id)] : [];
+      setCalled(list.includes(studentId));
+      const { data: mine } = await supabase
+        .from("votes")
+        .select("grade, volunteer, student_name")
+        .eq("session_id", sessionId)
+        .eq("slide_id", nextSlide.id)
+        .eq("student_id", studentId)
+        .maybeSingle();
+      if (!stop && !dirty.current) {
+        setGrade(mine?.grade ?? "");
+        setVolunteer(Boolean(mine?.volunteer));
+        setName(mine?.student_name ?? "");
+        setSaved(Boolean(mine));
+      }
+      if (data.show_results) {
+        const { data: all } = await supabase
+          .from("votes")
+          .select("grade")
+          .eq("session_id", sessionId)
+          .eq("slide_id", nextSlide.id);
+        if (!stop) {
+          setCounts(GRADES.map((g) => ({ grade: g, count: (all || []).filter((row) => row.grade === g).length })));
         }
-      })
+      }
+      if (!stop) setError("");
+    };
+    void load();
+    const channel = supabase
+      .channel(`vote-${sessionId}`)
+      .on("postgres_changes", { event: "*", schema: "public", table: "sessions" }, () => void load())
       .subscribe();
+    const timer = window.setInterval(() => void load(), 1500);
+    return () => {
+      stop = true;
+      window.clearInterval(timer);
+      void supabase.removeChannel(channel);
+    };
+  }, [sessionId, studentId, supabase]);
 
-    return () => { supabase.removeChannel(channel); };
-  }, [session]);
-
-  const submit = async () => {
-    if (!grade) return alert('Select a grade');
-    const { error } = await supabase.from('votes').upsert({
-      session_id: session,
-      slide_id: slidesData.slides[currentSlide].id,
-      student_id: studentId,
-      grade,
-      volunteer,
-      student_name: name || null
-    }, { onConflict: 'session_id,slide_id,student_id' });
-    if (error) alert(error.message);
-    else setSubmitted(true);
-  };
+  async function submit() {
+    if (!grade) {
+      setError("Choose a grade first.");
+      return;
+    }
+    if (!slide.isPoll) return;
+    const { error: voteError } = await supabase.from("votes").upsert(
+      {
+        session_id: sessionId,
+        slide_id: slide.id,
+        student_id: studentId,
+        grade,
+        volunteer,
+        student_name: name.trim() || null,
+      },
+      { onConflict: "session_id,slide_id,student_id" },
+    );
+    if (voteError) {
+      setError(voteError.message);
+      return;
+    }
+    dirty.current = false;
+    setSaved(true);
+    setError("");
+  }
 
   return (
-    <div style={{ maxWidth: 480, margin: '0 auto', padding: 16, fontFamily: 'system-ui' }}>
-      <h2>{slide?.title}</h2>
-      <pre style={{ whiteSpace: 'pre-wrap', fontSize: 14, background: '#f5f5f5', padding: 12, borderRadius: 8 }}>
-        {slide?.content}
-      </pre>
-
-      {slide?.isPoll && (
-        <div style={{ marginTop: 24 }}>
-          <h3>Your Grade</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-            {GRADES.map(g => (
+    <main className="vote">
+      <DeckSlide slide={slide} index={index} />
+      {called ? <p className="called">You were called. Come explain your grade.</p> : null}
+      {slide.isPoll ? (
+        <section>
+          <h2>Your grade</h2>
+          <div className="grades">
+            {GRADES.map((option) => (
               <button
-                key={g}
-                onClick={() => setGrade(g)}
-                style={{
-                  padding: '8px 14px',
-                  background: grade === g ? '#3b82f6' : '#e5e7eb',
-                  color: grade === g ? '#fff' : '#000',
-                  border: 'none',
-                  borderRadius: 6
+                key={option}
+                className={grade === option ? "grade on" : "grade"}
+                onClick={() => {
+                  dirty.current = true;
+                  setGrade(option);
+                  setSaved(false);
                 }}
-              >{g}</button>
+              >
+                {option}
+              </button>
             ))}
           </div>
-          <label style={{ display: 'block', marginTop: 16 }}>
-            <input type="checkbox" checked={volunteer} onChange={e => setVolunteer(e.target.checked)} />
-            {' '}I feel comfortable coming up to explain my grade
+          <label className="volunteer">
+            <input
+              type="checkbox"
+              checked={volunteer}
+              onChange={(event) => {
+                dirty.current = true;
+                setVolunteer(event.target.checked);
+                setSaved(false);
+              }}
+            />
+            I feel comfortable coming up to explain my grade
           </label>
-          <input
-            placeholder="Optional name (for volunteer)"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            style={{ width: '100%', marginTop: 8, padding: 8 }}
-          />
-          <button onClick={submit} style={{ marginTop: 16, padding: '10px 20px' }}>
-            {submitted ? 'Update Vote' : 'Submit Vote'}
+          <label className="name">
+            Name, optional
+            <input
+              type="text"
+              value={name}
+              maxLength={40}
+              placeholder="Only used if you volunteer"
+              onChange={(event) => {
+                dirty.current = true;
+                setName(event.target.value);
+                setSaved(false);
+              }}
+            />
+          </label>
+          <button className="btn primary submit" onClick={() => void submit()}>
+            {saved ? "Update vote" : "Submit vote"}
           </button>
-          {submitted && <p style={{ color: 'green' }}>Vote recorded! Waiting for instructor to show results.</p>}
-          {showResults && <p style={{ color: '#666' }}>Results are now visible on the projector.</p>}
-        </div>
+          {saved && !showResults ? <p className="muted">Recorded. Results stay hidden until the instructor opens them.</p> : null}
+          {showResults ? (
+            <div className="histogram">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={counts}>
+                  <XAxis dataKey="grade" tick={{ fontSize: 12 }} tickLine={false} />
+                  <Bar dataKey="count" fill="#8f1d1d" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          ) : null}
+        </section>
+      ) : (
+        <p className="muted">Follow the projector. Grading buttons appear on example slides.</p>
       )}
-    </div>
+      {error ? <p className="err">{error}</p> : null}
+    </main>
   );
 }

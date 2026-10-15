@@ -1,1 +1,1201 @@
-{"slides": [{"id": 1, "title": "Chapter 8. Written and oral communication", "content": "Chapter 8. Written and oral communication\n\u201cThe single biggest problem in communication is the illusion that it has taken place.\u201d \u2013 George Bernard Shaw.\nAME 101 Lecture Notes, pages 102\u2013107\n\n### Notes:", "isPoll": false, "type": "slide"}]}
+{
+  "slides": [
+    {
+      "id": 1,
+      "title": "Chapter 8. Written and oral communication",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "“The single biggest problem in communication is the illusion that it has taken place.” – George Bernard Shaw.",
+          "level": 0
+        },
+        {
+          "text": "AME 101 Lecture Notes, pages 102–107",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 2,
+      "title": "The Golden Rule",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "The Golden Rule of written technical communication can be stated as follows:",
+          "level": 0
+        },
+        {
+          "text": "If I didn’t already know this subject and were reading this paper (or listening to this presentation) for the first time, would I understand it?",
+          "level": 1
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 3,
+      "title": "Written papers or reports",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "1. The usual organization of a paper or report is",
+          "level": 0
+        },
+        {
+          "text": "A. Heading: title, authors, affiliations",
+          "level": 1
+        },
+        {
+          "text": "B. Abstract: explains what was done and what the main conclusions are. Must be short (a few hundred words at most, depending on the journal requirements), no matter how long and how complicated the paper is.",
+          "level": 1
+        },
+        {
+          "text": "C. Introduction:",
+          "level": 1
+        },
+        {
+          "text": "i. Explain what your problem is and why it is important.",
+          "level": 2
+        },
+        {
+          "text": "ii. State what is known about the subject.",
+          "level": 2
+        },
+        {
+          "text": "iii. Complain about what is lacking in the current state of knowledge",
+          "level": 2
+        },
+        {
+          "text": "iv. Explain what you will do that is better (may be in a separate Objectives section).",
+          "level": 2
+        },
+        {
+          "text": "D. Method: experimental apparatus, numerical model, whatever",
+          "level": 1
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 4,
+      "title": "Written papers or reports (continued)",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "E. Results: what you found and how it compares with previous works",
+          "level": 1
+        },
+        {
+          "text": "F. Conclusions: what you learned",
+          "level": 1
+        },
+        {
+          "text": "G. Future work (optional)",
+          "level": 1
+        },
+        {
+          "text": "H. Acknowledgements (optional) – organizations that funded the work and/or people who helped but wasn’t included on the author list (e.g. people who gave advice but didn’t participate in the work itself, technical support, computer programmers.)",
+          "level": 1
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 5,
+      "title": "Two ways novice writers fail",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "Almost all novice writers (and many experienced writers) fail in two ways when organizing a paper. First, they fail to state clearly their objectives (what they are trying to learn) and their message or conclusions (what they found). Any piece of information that does not help to support the message doesn’t belong in the paper (unless it helps to show what isn’t certain about the conclusions.) For each paragraph, each picture, etc., ask yourself 2 questions:",
+          "level": 0
+        },
+        {
+          "text": "1. What is the message I am trying to get across? and",
+          "level": 1
+        },
+        {
+          "text": "2. Does this picture or text do that?",
+          "level": 1
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 6,
+      "title": "Two ways novice writers fail (continued)",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "In particular, students like to report on everything they did that went wrong before they got to the final results, just to show that they worked hard even if they didn’t accomplish much. This may be ok for a lab report in a class, but for a technical paper, nobody wants to know that the first 7 voltmeters you tried didn’t work because someone spilled coffee on them. (Worst line ever: “We didn’t finish the project, but we have all the parts …” Which means you have some parts that might be useful; you never know if you have all of them until after the project is done.)",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 7,
+      "title": "Every symbol, equation, and word",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "2. Every symbol in the text",
+          "level": 0
+        },
+        {
+          "text": "A. is defined in a Nomenclature section (preferred) or defined at its first appearance in the text (often you have to do it this way because of space limitations, but it’s annoying to have to scan through a long document to find out what a is.) Hopefully you know by now how important it is to define your symbols.",
+          "level": 1
+        },
+        {
+          "text": "3. Every equation that is set apart from the text",
+          "level": 0
+        },
+        {
+          "text": "A. has a number",
+          "level": 1
+        },
+        {
+          "text": "B. has all of its symbols defined if not already or defined in a Nomenclature section (if used)",
+          "level": 1
+        },
+        {
+          "text": "4. Every word",
+          "level": 0
+        },
+        {
+          "text": "A. is spell-checked",
+          "level": 1
+        },
+        {
+          "text": "B. is defined the first time it is used if it is a “buzz word” or acronym. Example: “Many engineers use an excessive number of Three Letter Acronyms (TLAs).”",
+          "level": 1
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 8,
+      "title": "Every figure",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "5. Every figure",
+          "level": 0
+        },
+        {
+          "text": "A. is assigned a number – “Figure 1,” “Figure 2,” etc.",
+          "level": 1
+        },
+        {
+          "text": "B. is referred to in the text – no “orphan” figures!",
+          "level": 1
+        },
+        {
+          "text": "C. is referred to as “Figure x” if it appears at the beginning of a sentence, otherwise it is called “Fig. x”",
+          "level": 1
+        },
+        {
+          "text": "D. has a sensible scale on each axis (i.e. 0, 1, 2, 3; not -0.37, 0.15, 0.67)",
+          "level": 1
+        },
+        {
+          "text": "E. When showing multiple plots of similar results, use the same scales. For example, if showing the burning velocities of methane-air and propane-air mixtures as a function of fuel concentration on separate plots, use the same scale for burning velocity on each unless they have drastically different ranges.",
+          "level": 1
+        },
+        {
+          "text": "F. Uses a logarithmic scale if a large numerical range of data (more than one decade) is covered (otherwise all the data having low numerical values are squashed together)",
+          "level": 1
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 9,
+      "title": "Every figure (continued)",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "G. has the units defined on each axis",
+          "level": 1
+        },
+        {
+          "text": "H. has a caption (in addition to its figure number)",
+          "level": 1
+        },
+        {
+          "text": "I. has all relevant conditions (pressure, temperature, whatever is important) stated on the plot or in the caption",
+          "level": 1
+        },
+        {
+          "text": "J. has all plot symbols (squares, circles, filled or open, ...) and curves (solid, dotted, dashed,..) defined either in a legend box within the figure (preferred method) or in the caption",
+          "level": 1
+        },
+        {
+          "text": "K. Does not have a lot of “white space”",
+          "level": 1
+        },
+        {
+          "text": "L. if it is a picture, it has a scale on the picture or has a statement in the caption such as “field of view is xxx cm by yyy cm” or has some object of easily identifiable scale (a person, coin, etc.) in the picture",
+          "level": 1
+        },
+        {
+          "text": "M. must be readable - caution on pictures!!!",
+          "level": 1
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 10,
+      "title": "Figure 27a",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": "/images/image1.png",
+      "blocks": [
+        {
+          "text": "Figure 27a. Terrible figure.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 11,
+      "title": "Figure 27a: What’s wrong?",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "Figure 27a shows a terrible figure with many common mistakes. What’s wrong?",
+          "level": 0
+        },
+        {
+          "text": "• The scales on each axis are terrible – weird numbers, not 1, 2, 3, …",
+          "level": 0
+        },
+        {
+          "text": "• Units are not defined on the vertical axis (Seconds? Nanoseconds? Millenia?)",
+          "level": 0
+        },
+        {
+          "text": "• The plot symbols are defined using meaningless notation (“Condition 17” means nothing to the reader.)",
+          "level": 0
+        },
+        {
+          "text": "• There is a tremendous amount of “white space”",
+          "level": 0
+        },
+        {
+          "text": "• Most of the data squashed together because a linear scale was used - the scale has to be large enough to cover the large values of rise time in “Test –117”, which goes up to 300, but most of the data is in the 10 – 50 range",
+          "level": 0
+        },
+        {
+          "text": "• There are tick marks inside, outside, all over the place (I prefer tick marks on the inside only). Also, the major and minor tick marks are the same length so it’s hard to distinguish between them.",
+          "level": 0
+        },
+        {
+          "text": "• The plot symbols are too small to see",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 12,
+      "title": "What’s wrong? (continued)",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "• The numbers are too small to read",
+          "level": 0
+        },
+        {
+          "text": "• All of the grid lines make it hard to read the data and legend. (I don’t like grids at all, they clutter the figure – if someone really wants to pick points off your graph, they can draw their own grid lines or ask you to email the data file to you.)",
+          "level": 0
+        },
+        {
+          "text": "• There are ugly looking jagged lines connecting the data points (rather than a smoothed curve)",
+          "level": 0
+        },
+        {
+          "text": "• Three data sets have lines connecting them, whereas the fourth does not (is there something different about the fourth data set that makes it ineligible for connecting lines?)",
+          "level": 0
+        },
+        {
+          "text": "• The axes and tick marks are too thin",
+          "level": 0
+        },
+        {
+          "text": "A big part of the problem is that most people just let their plotting program make bad plots using all the default settings, and somehow try to rationalize that still a good plot. Figure 27b shows a reasonable figure presenting exactly the same data as Figure 27a.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 13,
+      "title": "Figure 27b",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": "/images/image2.png",
+      "blocks": [
+        {
+          "text": "Figure 27b. Reasonable figure presenting same data as in Figure 27a.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 14,
+      "title": "Every reference",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "6. Every reference cited in the text",
+          "level": 0
+        },
+        {
+          "text": "A. appears in the reference section",
+          "level": 1
+        },
+        {
+          "text": "B. is a plain number (i.e. 11, 12, 13; not 11, 11a, 11b) or follow the Harvard system (e.g. Smith and Jones, 1953) depending on the instructions to authors",
+          "level": 1
+        },
+        {
+          "text": "C. if a number, may be superscript or in [brackets] or (parenthesis) depending on the instructions to authors",
+          "level": 1
+        },
+        {
+          "text": "7. Every reference in the reference section",
+          "level": 0
+        },
+        {
+          "text": "A. is called out in the text; it is not acceptable to simply have a list of references at the end of a document without referring them in the text so that the reader knows what information was used from that reference",
+          "level": 1
+        },
+        {
+          "text": "B. has the journal name or book title (journal titles may or may not be abbreviated depending on the instructions to authors)",
+          "level": 1
+        },
+        {
+          "text": "C. has the page number (may be just the first page of the article or inclusive pages depending on the instructions to authors)",
+          "level": 1
+        },
+        {
+          "text": "D. has the journal issue number (if a journal article)",
+          "level": 1
+        },
+        {
+          "text": "E. has the publisher (if a book)",
+          "level": 1
+        },
+        {
+          "text": "F. has the year of publication",
+          "level": 1
+        },
+        {
+          "text": "G. may or may not have the title of the article depending on the instructions to authors",
+          "level": 1
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 15,
+      "title": "Bottom line",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "Bottom line: ask yourself, if I were reading this paper for the first time, and I were not already aware of the results, would I understand this paper???",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 16,
+      "title": "Practice Being the Grader",
+      "kind": "section",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "Three rounds, seven examples each (A to G), all from last year's reports with names removed.",
+          "level": 0
+        },
+        {
+          "text": "For Each Example, Assign a Letter Grade",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 17,
+      "title": "Round 1: Vehicle photos with captions",
+      "kind": "section",
+      "isPoll": false,
+      "letter": null,
+      "round": 1,
+      "image": null,
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 18,
+      "title": "Round 1: Vehicle photos with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "A",
+      "round": 1,
+      "image": "/images/image3.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 19,
+      "title": "Round 1: Vehicle photos with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "B",
+      "round": 1,
+      "image": "/images/image4.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 20,
+      "title": "Round 1: Vehicle photos with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "C",
+      "round": 1,
+      "image": "/images/image5.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 21,
+      "title": "Round 1: Vehicle photos with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "D",
+      "round": 1,
+      "image": "/images/image6.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 22,
+      "title": "Round 1: Vehicle photos with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "E",
+      "round": 1,
+      "image": "/images/image7.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 23,
+      "title": "Round 1: Vehicle photos with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "F",
+      "round": 1,
+      "image": "/images/image8.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 24,
+      "title": "Round 1: Vehicle photos with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "G",
+      "round": 1,
+      "image": "/images/image9.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 25,
+      "title": "Answer key · Round 1 · Vehicle photos",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": null,
+      "round": 1,
+      "image": null,
+      "blocks": [],
+      "answers": [
+        {
+          "letter": "A",
+          "verdict": "OK",
+          "note": "Clean, in focus, vehicle fills the frame, and the caption adds a sentence of purpose. Loses on the busy carpet background and no sense of scale.",
+          "source": "F25 Team 17, Fig. 13 (score 94)"
+        },
+        {
+          "letter": "B",
+          "verdict": "STRONG",
+          "note": "Plain backdrop, whole vehicle visible, components identifiable, tidy wiring. Caption is short but the figure is referenced in the text and the vehicle is the final one. From the 101/100 report.",
+          "source": "F25 Team 14, Fig. 22"
+        },
+        {
+          "letter": "C",
+          "verdict": "WEAK",
+          "note": "Hand-held, off-center, half the frame is a tray and a sleeve. Grader wrote: \"Clean up. Center.\" and, next to the word glitter, \"not glitter.\"",
+          "source": "F25 Team 13, Fig. 5 (score 72)"
+        },
+        {
+          "letter": "D",
+          "verdict": "OK",
+          "note": "Shows the modification named in the caption, but shot from above on a cluttered bench with wires everywhere; caption gives no detail. No grader comment, no credit lost, no credit earned.",
+          "source": "F25 Team 06, Fig. 4 (score 96)"
+        },
+        {
+          "letter": "E",
+          "verdict": "WEAK",
+          "note": "Wire nest photographed and then excused in the caption. Grader: \"Maybe you should clean them up then.\" Do not document a problem you could fix in ten minutes.",
+          "source": "F25 Team 17, Fig. 1"
+        },
+        {
+          "letter": "F",
+          "verdict": "GOOD",
+          "note": "Close-up of exactly what the caption describes, with a caption that explains what you are seeing and why (electrical tape, capacitors and resistors to reduce interference).",
+          "source": "F25 Team 11, Fig. 3 (score 95)"
+        },
+        {
+          "letter": "G",
+          "verdict": "WEAK",
+          "note": "AI slop. Beautiful, and none of it exists: LiDAR, Jetson, RTK GPS, brushless motors, a 22 V pack, 12.4 kg on a 1 kg limit. It is not a figure of your vehicle, it is a figure of a vehicle. A grader reads this as 'did not build what they describe.'",
+          "source": "Fabricated"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "What an A+ looks like · Round 1 · Vehicle photo with caption",
+      "kind": "exemplar",
+      "isPoll": false,
+      "letter": null,
+      "round": 1,
+      "image": "/images/image10.png",
+      "blocks": [
+        {
+          "text": "Built from last year's 101/100 vehicle photo. Everything here takes a phone, a plain background, and ten minutes in PowerPoint or Google Slides.",
+          "level": 0
+        },
+        {
+          "text": "Why this earns full credit",
+          "level": 0
+        },
+        {
+          "text": "One clean side view, vehicle fills the frame, final configuration (not a prototype).",
+          "level": 0
+        },
+        {
+          "text": "Numbered callouts with a key, so the text can say \"the accelerometer (Fig. 7, item 2)\" instead of \"the little purple board.\"",
+          "level": 0
+        },
+        {
+          "text": "A scale bar tied to a known dimension. Mass and dimensions pointed to in a table rather than repeated in the caption.",
+          "level": 0
+        },
+        {
+          "text": "The caption says what the figure is, when it was taken, and why it matters (serviceable between rounds), and points to the section that uses it.",
+          "level": 0
+        },
+        {
+          "text": "Background removed with one prompt (next page shows before and after). A matching top view would complete it.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 27,
+      "title": "Good use of AI · Round 1 · Example B, before and after one prompt",
+      "kind": "exemplar",
+      "isPoll": false,
+      "letter": null,
+      "round": 1,
+      "image": "/images/image11.png",
+      "blocks": [
+        {
+          "text": "The same photo students just graded as B. One request to an image tool, no change to the engineering, and the figure now reads like the exemplar.",
+          "level": 0
+        },
+        {
+          "text": "Why this earns full credit",
+          "level": 0
+        },
+        {
+          "text": "Allowed and encouraged: removing a background, cropping, straightening, fixing exposure, labeling parts. The vehicle in the picture is still the one you built.",
+          "level": 0
+        },
+        {
+          "text": "Not allowed: generating a picture of a vehicle, adding parts that are not there, or 'cleaning up' wiring that is actually messy. The photo is evidence; evidence is not edited.",
+          "level": 0
+        },
+        {
+          "text": "Say what you did in the caption or methods (\"background removed\"). Tools make mistakes: this one first deleted the purple ramp and the spoiler.",
+          "level": 0
+        },
+        {
+          "text": "Compare with Round 1 G: that is what it looks like when the AI supplies the content instead of the polish.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 28,
+      "title": "Round 2: Data figures and tables with captions",
+      "kind": "section",
+      "isPoll": false,
+      "letter": null,
+      "round": 2,
+      "image": null,
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 29,
+      "title": "Round 2: Data figures and tables with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "A",
+      "round": 2,
+      "image": "/images/image12.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 30,
+      "title": "Round 2: Data figures and tables with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "B",
+      "round": 2,
+      "image": "/images/image13.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 31,
+      "title": "Round 2: Data figures and tables with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "C",
+      "round": 2,
+      "image": "/images/image14.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 32,
+      "title": "Round 2: Data figures and tables with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "D",
+      "round": 2,
+      "image": "/images/image15.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 33,
+      "title": "Round 2: Data figures and tables with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "E",
+      "round": 2,
+      "image": "/images/image16.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 34,
+      "title": "Round 2: Data figures and tables with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "F",
+      "round": 2,
+      "image": "/images/image17.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 35,
+      "title": "Round 2: Data figures and tables with captions",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "G",
+      "round": 2,
+      "image": "/images/image18.png",
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 36,
+      "title": "Answer key · Round 2 · Data figures and tables",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": null,
+      "round": 2,
+      "image": null,
+      "blocks": [],
+      "answers": [
+        {
+          "letter": "A",
+          "verdict": "GOOD",
+          "note": "Each row is a test with the variable changed (motor turn-on time), the outcome, and a photo of the path. Grader wrote \"good.\" This is iteration you can see.",
+          "source": "F25 Team 04, Table 1 (score 100)"
+        },
+        {
+          "letter": "B",
+          "verdict": "WEAK",
+          "note": "Made-up example. Default plot: \"Chart Title\", \"Series1\", no axis labels, no units, gridlines, no conditions stated, caption says nothing. Everything Chapter 8 warns about.",
+          "source": "Fabricated"
+        },
+        {
+          "letter": "C",
+          "verdict": "OK",
+          "note": "Trial-by-trial log with outcome, diagnosis and the change made. Grader wrote \"love this.\" But no numbers: no climb times, no distances, no success counts. Would be strong with one numeric column.",
+          "source": "F25 Team 06 trials table (score 96)"
+        },
+        {
+          "letter": "D",
+          "verdict": "STRONG",
+          "note": "Measured force with a gauge, mass varied, six trials, units in the header, best value highlighted, full caption. Grader's only note: take an average and compute the coefficient of friction.",
+          "source": "F25 Team 01, Table 1 (score 96)"
+        },
+        {
+          "letter": "E",
+          "verdict": "OK",
+          "note": "Expected vs. observed for three tests, with a note on what to fix next. Clear and honest, but qualitative: \"slight delay,\" \"inconsistent\" with no measurement attached.",
+          "source": "F25 Team 14, Table 3 (score 101)"
+        },
+        {
+          "letter": "F",
+          "verdict": "WEAK",
+          "note": "Two captions with no figure under them, a third figure that is a CAD screenshot with the toolbar still showing. Grader circled the orphan captions.",
+          "source": "F25 Team 13, Figs. 6a/6b/7 (score 72)"
+        },
+        {
+          "letter": "G",
+          "verdict": "WEAK",
+          "note": "AI slop. Six panels, zero measurements. Every axis is 'normalized' or 'index' in arbitrary units; the 'data' is a simulation of a vehicle that was never tested on the ramp; R² = 0.998 on a curve with no points; a 'win probability' with no rounds played. Ask: which number here came from a ruler, a stopwatch or a scale?",
+          "source": "Fabricated"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "title": "What an A+ looks like · Round 2 · Data figure with caption",
+      "kind": "exemplar",
+      "isPoll": false,
+      "letter": null,
+      "round": 2,
+      "image": "/images/image19.png",
+      "blocks": [
+        {
+          "text": "Made from Team 1's actual friction measurements (Round 2, example D). Same six numbers per surface; the difference is what was done with them.",
+          "level": 0
+        },
+        {
+          "text": "Why this earns full credit",
+          "level": 0
+        },
+        {
+          "text": "Raw data reduced to an engineering quantity: the slope of F vs N is the friction coefficient, so the plot answers the design question directly.",
+          "level": 0
+        },
+        {
+          "text": "A physical reference line (tan 30° = 0.58) turns \"higher is better\" into \"here is the margin we need.\"",
+          "level": 0
+        },
+        {
+          "text": "Axes labeled with units, conditions stated (ramp angle, masses, trials), series named in a legend and labeled directly, no gridline clutter, no default \"Chart Title.\"",
+          "level": 0
+        },
+        {
+          "text": "The caption states the method, the result with numbers, and one limitation (coating wears) that the Lessons Learned section can pick up.",
+          "level": 0
+        },
+        {
+          "text": "Students can do this in Excel or Google Sheets: scatter plot, trendline through origin, show equation. The physics is one line: F = μN.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 38,
+      "title": "Round 3: Engineering reasoning paragraphs",
+      "kind": "section",
+      "isPoll": false,
+      "letter": null,
+      "round": 3,
+      "image": null,
+      "blocks": [],
+      "answers": []
+    },
+    {
+      "id": 39,
+      "title": "Round 3: Engineering reasoning paragraphs",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "A",
+      "round": 3,
+      "image": null,
+      "blocks": [
+        {
+          "text": "This design was chosen because it was the best of all worlds. Although it would not be fast, as it would utilize a 38.2:1 gear ratio (Type B according to the 70108 Tracked Vehicle Chassis Kit instruction manual), it would theoretically provide the car with enough torque to not only make it up the ramp but to move any faster car already positioned in the middle of the top platform. In addition, this design would be able to keep most of its weight in the back of the vehicle in order to avoid tipping on the fairly steep 30-degree ramp.",
+          "level": 0
+        },
+        {
+          "text": "Another important aspect of this car was that it was the simplest. We expected many groups to run into problems with overcomplicating their designs. To avoid this problem, we decided to make it our goal to be able to consistently reach the top quickly and safely.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 40,
+      "title": "Round 3: Engineering reasoning paragraphs",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "B",
+      "round": 3,
+      "image": null,
+      "blocks": [
+        {
+          "text": "In our code, we used an accelerometer to measure the acceleration downwards (towards the ground), having the car stop when the acceleration was 9.8 or higher, as that would indicate that it reached a flat surface, and anything below that would be when the car was going up the hill. However, we ran into an issue where the car would constantly stop and go as it was going up the ramp. We then coded a debugging output so that we could see why this was happening. This time, when we ran the trial, we saw that the acceleration value as the car was going up the ramp was below 9.8, as expected, but would sometimes spike up to 20 or more meters per second squared. Thus, we added an or statement into our accelerometer code that read:",
+          "level": 0
+        },
+        {
+          "text": "if (a.acceleration.z < 9.8 || a.acceleration.z > 12.8)",
+          "level": 0
+        },
+        {
+          "text": "The value of 12.8 was arrived at experimentally through many trials to find the number that would result in the least stop-and-go up the ramp. This code was used so that if the acceleration value was less than 9.8 (going up the ramp) or more than 12.8 (a random spike), it would move, but if it was in between these two values (on the flat surface), it would stop. This fixed the issue.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 41,
+      "title": "Round 3: Engineering reasoning paragraphs",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "C",
+      "round": 3,
+      "image": null,
+      "blocks": [
+        {
+          "text": "Tracks: To improve the traction of the tracks, we used the “Fried Chicken” method that Professor Ronney recommended that people do. We applied super glue to the rubber track thread and then put fine modeling sand on it to increase surface roughness. During the early testing stages, we observed a noticeable reduction in slippage on the ramp and an increase in speed. The modified tracks gripped the ramp even at steep angles, allowing the motors to transfer torque efficiently into forward motion rather than wheel spin. The “Fried Chicken” method increases the robot's speed on the ramp from 10 seconds to 6 seconds.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 42,
+      "title": "Round 3: Engineering reasoning paragraphs",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "D",
+      "round": 3,
+      "image": null,
+      "blocks": [
+        {
+          "text": "Test Results/Issues",
+          "level": 0
+        },
+        {
+          "text": "There were several performance issues in our first test run. First, the vehicle had poor balance. As the vehicle climbed, the front of the vehicle kept lifting up. This can be explained by the vehicle’s center of mass being positioned towards the back of the vehicle. With more weight on the back wheels, this causes the torque about the back wheels to increase, lifting the front wheels off the ramp. Another issue was the insufficient contact between the tracks and the ramp, limiting friction and making it difficult for the vehicle to maintain stability when climbing the track.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 43,
+      "title": "Round 3: Engineering reasoning paragraphs",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "E",
+      "round": 3,
+      "image": null,
+      "blocks": [
+        {
+          "text": "We chose a dual motor design to improve the amount of torque provided by the motors compared to the single motor. The increase in torque allowed our vehicle to more easily climb the steep incline of the ramp. Using dual motors gave us the option to code the Arduino so that the car could turn if it ended up getting stuck on the sides of the ramp or got rotated by another car. We did not end up doing this because we realized that when our car drove up the left wall of the ramp, it stopped at the top of the ramp more consistently because it was moving a bit slower, giving the car more time to stop when the accelerometer went parallel to the ground. After testing gear ratios, we went with gear ratio 114.7:1 because it balanced speed with enough torque to still make it up the ramp.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 44,
+      "title": "Round 3: Engineering reasoning paragraphs",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "F",
+      "round": 3,
+      "image": null,
+      "blocks": [
+        {
+          "text": "We chose Gear Ratio C (114.7:1)",
+          "level": 0
+        },
+        {
+          "text": "• Our goal was to reach the top of the hill before the opponent did so we prioritized speed instead of power. We also wanted to make sure it had enough torque to actually climb the hill; hence, we wanted to find a good balance between speed and torque.",
+          "level": 0
+        },
+        {
+          "text": "• Gear Ratio C provides the middle ground: moderately high torque (809 gf·cm) and second highest speed (115 rpm)",
+          "level": 0
+        },
+        {
+          "text": "◦ Ideal for slope as Ratios A and B didn’t generate enough torque while Ratio D sacrifices too much speed",
+          "level": 2
+        },
+        {
+          "text": "(This paragraph followed a four-column table comparing the torque and speed of gear ratios A, B, C and D.)",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 45,
+      "title": "Round 3: Engineering reasoning paragraphs",
+      "kind": "example",
+      "isPoll": true,
+      "letter": "G",
+      "round": 3,
+      "image": null,
+      "blocks": [
+        {
+          "text": "3.4 Drivetrain Optimization and Control Architecture",
+          "level": 0
+        },
+        {
+          "text": "Leveraging a holistic, systems-level design philosophy, our team synergistically optimized the drivetrain’s torque–velocity envelope through an iterative, data-driven refinement process grounded in first-principles physics. A high-fidelity multibody dynamics model of the vehicle was developed and validated against finite-element structural analysis, confirming a safety factor of 4.2 under 5 g impact loading. Closed-loop PID control of wheel velocity, informed by real-time sensor fusion of IMU, wheel-encoder and LiDAR data via an Extended Kalman Filter, enabled robust disturbance rejection and sub-degree heading accuracy throughout the ascent phase. Monte Carlo simulation (n = 10,000) across a stochastic terrain-friction distribution indicated a 93% probability of successful summit acquisition, while aerodynamic drag was minimized through parametric optimization of the chassis profile (C_d reduced from 0.41 to 0.29). The resulting architecture is highly scalable, modular and extensible, and establishes a strong foundation for future autonomous mobility applications. Overall, these results robustly demonstrate the efficacy of our approach and the superior performance of the final design.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 46,
+      "title": "Answer key · Round 3 · Engineering reasoning",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": null,
+      "round": 3,
+      "image": null,
+      "blocks": [],
+      "answers": [
+        {
+          "letter": "A",
+          "verdict": "WEAK",
+          "note": "\"Best of all worlds\" and \"theoretically provide enough torque\" with no torque number, no comparison to the other three ratios, no test. Grader: \"Why not use a comparison?\" \"What about it?\"",
+          "source": "F25 Team 09 (score 90 overall; Documentation 28/35)"
+        },
+        {
+          "letter": "B",
+          "verdict": "STRONG",
+          "note": "A real debugging story with numbers: threshold 9.8, spikes to 20+, second threshold 12.8 found experimentally, the actual line of code, and the result. Grader: \"good.\"",
+          "source": "F25 Team 06 (score 96)"
+        },
+        {
+          "letter": "C",
+          "verdict": "OK",
+          "note": "Correct mechanism (surface roughness, torque into motion instead of wheel spin) and one measured result (10 s to 6 s). Grader: \"better if you show measured data.\" One number is a start, a table of trials is the finish.",
+          "source": "F25 Team 02 (score 77)"
+        },
+        {
+          "letter": "D",
+          "verdict": "WEAK",
+          "note": "Names center of mass, torque and friction but never uses them: no location of the center of mass, no moment calculation, no friction measurement. Grader: \"No evidence of physics and engineering knowledge of friction.\"",
+          "source": "F25 Team 15 (score 70)"
+        },
+        {
+          "letter": "E",
+          "verdict": "OK",
+          "note": "Sensible reasoning and a decision (dual motors, 114.7:1), but every claim is qualitative: \"improve the amount of torque,\" \"a bit slower.\" Which gear ratios were tested and what were the climb times?",
+          "source": "F25 Team 06 (score 96)"
+        },
+        {
+          "letter": "F",
+          "verdict": "STRONG",
+          "note": "Objective stated, options compared in torque (gf-cm) and speed (rpm), the choice justified against each alternative. Grader: \"good\" and \"Show calcs!\" Even the best paragraph got asked for the calculation.",
+          "source": "F25 Team 14 (score 101)"
+        },
+        {
+          "letter": "G",
+          "verdict": "WEAK",
+          "note": "AI slop. Every sentence sounds like engineering and none of it is this project: PID + EKF + LiDAR on an Arduino with one accelerometer; FEA at 5 g; drag coefficient on a vehicle moving at 0.3 m/s; a Monte Carlo result instead of a ramp trial. Not one number was measured. The tell: 'robustly demonstrate,' 'synergistically,' 'highly scalable' and no 'we measured.'",
+          "source": "Fabricated"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "title": "What an A+ looks like · Round 3 · Engineering reasoning paragraph",
+      "kind": "exemplar",
+      "isPoll": false,
+      "letter": null,
+      "round": 3,
+      "image": null,
+      "blocks": [
+        {
+          "text": "Written around Team 1's real friction data. The five labels can be headings or just the first word of each sentence; the structure is what scores.",
+          "level": 0
+        },
+        {
+          "text": "4.2 Track surface test",
+          "level": 0
+        },
+        {
+          "text": "Problem. In ramp trials 1–3 the stock rubber tracks spun in place on the 30° ramp and the vehicle did not climb (0 of 3 attempts). The motors were turning; the tracks were not gripping.",
+          "level": 0
+        },
+        {
+          "text": "Hypothesis. Available traction is F_max = μN. On a 30° ramp the vehicle needs μ ≥ tan 30° = 0.58 just to hold position, and more than that to accelerate. We expected the stock tracks to be near this limit and a rougher surface to roughly double μ.",
+          "level": 0
+        },
+        {
+          "text": "Test. We wedged a section of track between a known mass and the contest ramp and pulled parallel to the surface with a spring force gauge until it slipped. Masses 0.2, 0.3, 0.5 and 1.0 kg, two trials per mass, three surfaces: stock, sandpaper glued on, and glue plus red sand. Normal force N = mg cos 30°.",
+          "level": 0
+        },
+        {
+          "text": "Result. Effective friction coefficients (slope of F vs N, Figure 4): stock 0.76, sandpaper 1.10, red sand 1.42; per-trial means 0.66 ± 0.16, 1.14 ± 0.17, 1.33 ± 0.21. Stock tracks sit only about 15% above the 0.58 threshold, which explains the slipping. Red sand gives a 2.4× margin.",
+          "level": 0
+        },
+        {
+          "text": "Decision. Coat the tracks with glue and red sand. Because the coating wore visibly after about five ramp runs, we re-coated the night before competition and carried glue and sand for touch-ups between rounds (Section 5.1).",
+          "level": 0
+        },
+        {
+          "text": "Why this earns full credit",
+          "level": 0
+        },
+        {
+          "text": "Every sentence that makes a claim has a number next to it: attempts, angle, masses, trials, coefficients, margin.",
+          "level": 0
+        },
+        {
+          "text": "The physics is used, not name-dropped: F = μN and μ ≥ tan θ set a target before the test, so the result can be judged against it.",
+          "level": 0
+        },
+        {
+          "text": "Problem, Hypothesis, Test, Result, Decision: a reader can see why each step follows from the last. No diary, no \"it worked better so we kept it.\"",
+          "level": 0
+        },
+        {
+          "text": "The decision includes the limitation the test revealed and what was done about it, which is already half of a Lessons Learned entry.",
+          "level": 0
+        },
+        {
+          "text": "Length: 180 words. This is not longer than last year's weak paragraphs; it is just denser.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    },
+    {
+      "id": 48,
+      "title": "Back to your own report",
+      "kind": "close",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {
+          "text": "Every claim in Testing gets a number. Every number gets the physics behind it.",
+          "level": 0
+        },
+        {
+          "text": "Photos: plain background, vehicle fills the frame, caption says what to see. AI may remove a background; it may not supply the robot.",
+          "level": 0
+        },
+        {
+          "text": "Data: reduce it. Average, spread, slope, and one reference line that says what good enough means.",
+          "level": 0
+        },
+        {
+          "text": "Reasoning: Problem, Hypothesis, Test, Result, Decision. If a sentence could appear in any team's report, it is not evidence.",
+          "level": 0
+        },
+        {
+          "text": "The wildcards scored 1 every time. Polish is not content.",
+          "level": 0
+        }
+      ],
+      "answers": []
+    }
+  ]
+}
