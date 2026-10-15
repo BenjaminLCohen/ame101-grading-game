@@ -1,13 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { supabase, GRADES } from '@/lib/supabase';
+import { createClient, GRADES } from '@/utils/supabase/client';
 import slidesData from '@/data/slides.json';
 import { useSearchParams } from 'next/navigation';
 
 const SESSION = 'class';
 
 export default function VotePage() {
+  const supabase = createClient();
   const params = useSearchParams();
   const session = params.get('session') || SESSION;
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,7 +35,6 @@ export default function VotePage() {
         setCurrentSlide(data.current_slide || 0);
         setShowResults(data.show_results || false);
       }
-      // Check existing vote
       const { data: v } = await supabase.from('votes')
         .select('*')
         .eq('session_id', session)
@@ -56,7 +56,7 @@ export default function VotePage() {
         if (d) {
           setCurrentSlide(d.current_slide);
           setShowResults(d.show_results);
-          setSubmitted(false); // reset on slide change
+          setSubmitted(false);
           setGrade('');
         }
       })
