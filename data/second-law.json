@@ -1,1 +1,573 @@
-$(cat /tmp/second-law-full.json)
+{
+  "slides": [
+    {
+      "id": 1,
+      "title": "The Second Law: why things only go one way",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "AME 101 · Chapter 7 · Second Law, entropy, engines and refrigerators", "level": 0},
+        {"text": "Lecture runs 50 minutes with 24 votes.", "level": 0}
+      ],
+      "answers": []
+    },
+    {
+      "id": 2,
+      "title": "One simple question",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "“What does the Earth get from the sun?”", "level": 0},
+        {"text": "Take two or three shouted answers, then run Vote 1.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 3,
+      "title": "Compared with the energy Earth receives from the Sun, how much does Earth radiate back to space?",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "1",
+      "round": 1,
+      "image": null,
+      "blocks": [],
+      "options": ["Much less, about 20%", "About 70%", "Essentially the same amount", "More than it receives"],
+      "correct": "C",
+      "answers": []
+    },
+    {
+      "id": 4,
+      "title": "Answer 1",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "1",
+      "round": 1,
+      "image": null,
+      "blocks": [
+        {"text": "C. Essentially the same amount", "level": 0},
+        {"text": "Over time, energy in equals energy out. Otherwise Earth would keep heating up.", "level": 1},
+        {"text": "So if Earth gives all the energy back, what is it actually getting from the Sun?", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 5,
+      "title": "The First Law is not the whole story",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "It says energy is conserved. It says nothing about which direction a process goes.", "level": 0},
+        {"text": "Methane and air at 300 K burn to CO₂, H₂O and N₂ at 2000 K.", "level": 0},
+        {"text": "The reverse would conserve energy too. Nobody has ever seen it happen.", "level": 0},
+        {"text": "Call-on: Name an everyday process you have never seen run backward.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 6,
+      "title": "Entropy",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "A property of a substance: a measure of its “disorganization” or “randomness.”", "level": 0},
+        {"text": "More spread out means we know less about where the molecules are, so entropy is higher.", "level": 0},
+        {"text": "Another way to see it: entropy tracks how spread out the energy is.", "level": 0}
+      ],
+      "answers": []
+    },
+    {
+      "id": 7,
+      "title": "The Second Law",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "The entropy of an isolated system always increases or remains the same", "level": 0},
+        {"text": "Burning raises entropy, so it happens on its own.", "level": 1},
+        {"text": "Un-burning is possible only by raising the entropy of the surroundings by more.", "level": 1},
+        {"text": "Clausius, 1865: the energy of the universe is constant; its entropy tends to a maximum.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 8,
+      "title": "S = k ln(Ω)",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "Ω (omega) is the number of different ways the system can hold its energy.", "level": 0},
+        {"text": "Example: 3 atoms share 2 packets of energy. Count the boxes: Ω = 6.", "level": 0},
+        {"text": "k = 1.38 × 10⁻²³ J/K is Boltzmann's constant.", "level": 0}
+      ],
+      "answers": []
+    },
+    {
+      "id": 9,
+      "title": "A system has exactly one way to hold its energy (Ω = 1). Its entropy S = k ln(Ω) is:",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "2",
+      "round": 1,
+      "image": null,
+      "blocks": [],
+      "options": ["0", "k", "Infinite", "Undefined"],
+      "correct": "A",
+      "answers": []
+    },
+    {
+      "id": 10,
+      "title": "Answer 2",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "2",
+      "round": 1,
+      "image": null,
+      "blocks": [
+        {"text": "A. 0", "level": 0},
+        {"text": "ln(1) = 0. One arrangement means no uncertainty and no disorganization.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 11,
+      "title": "Why do we never see a cold spoon make hot coffee hotter?",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "3",
+      "round": 1,
+      "image": null,
+      "blocks": [],
+      "options": ["Energy conservation forbids it", "Atoms cannot pass energy to faster atoms", "It is allowed, but overwhelmingly improbable with ~10²⁶ atoms", "Gravity prevents it"],
+      "correct": "C",
+      "answers": []
+    },
+    {
+      "id": 12,
+      "title": "Answer 3",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "3",
+      "round": 1,
+      "image": null,
+      "blocks": [
+        {"text": "C. It is allowed, but overwhelmingly improbable with ~10²⁶ atoms", "level": 0},
+        {"text": "The First Law is satisfied either way. The odds rule it out.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 13,
+      "title": "Consequence 1",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "No device can have as its only effect the transfer of heat from cold to hot.", "level": 0},
+        {"text": "A refrigerator moves heat from cold to hot, but it needs a work input.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 14,
+      "title": "1,000 J of heat flows from a block at 500 K to a block at 250 K. The entropy change of the universe is:",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "4",
+      "round": 1,
+      "image": null,
+      "blocks": [],
+      "options": ["−2 J/K", "0 J/K", "+6 J/K", "+2 J/K"],
+      "correct": "D",
+      "answers": []
+    },
+    {
+      "id": 15,
+      "title": "Answer 4",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "4",
+      "round": 1,
+      "image": null,
+      "blocks": [
+        {"text": "D. +2 J/K", "level": 0},
+        {"text": "Hot: −1000/500 = −2. Cold: +1000/250 = +4. Total +2 J/K (allowed, irreversible).", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 16,
+      "title": "Rapid Round 1 — Ice cube in warm drink",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "5",
+      "round": 1,
+      "image": null,
+      "blocks": [{"text": "Ice gets colder, drink gets hotter. Nothing else changes.", "level": 0}],
+      "options": ["Allowed", "Breaks the First Law", "Breaks the Second Law"],
+      "correct": "C",
+      "answers": []
+    },
+    {
+      "id": 17,
+      "title": "Answer 5",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "5",
+      "round": 1,
+      "image": null,
+      "blocks": [
+        {"text": "C. Breaks the Second Law", "level": 0},
+        {"text": "Heat moving from cold to hot with no other effect. Entropy of the isolated glass would fall.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 18,
+      "title": "Rapid Round 1 — Toaster",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "6",
+      "round": 1,
+      "image": null,
+      "blocks": [{"text": "A toaster turns 1,000 W of electricity into 1,000 W of heat.", "level": 0}],
+      "options": ["Allowed", "Breaks the First Law", "Breaks the Second Law"],
+      "correct": "A",
+      "answers": []
+    },
+    {
+      "id": 19,
+      "title": "Answer 6",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "6",
+      "round": 1,
+      "image": null,
+      "blocks": [
+        {"text": "A. Allowed", "level": 0},
+        {"text": "Turning work entirely into heat is always allowed.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 20,
+      "title": "Rapid Round 1 — Generator + motor",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "7",
+      "round": 1,
+      "image": null,
+      "blocks": [{"text": "Generator runs a motor that spins the same generator, with 10 W left over.", "level": 0}],
+      "options": ["Allowed", "Breaks the First Law", "Breaks the Second Law"],
+      "correct": "B",
+      "answers": []
+    },
+    {
+      "id": 21,
+      "title": "Answer 7",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "7",
+      "round": 1,
+      "image": null,
+      "blocks": [
+        {"text": "B. Breaks the First Law", "level": 0},
+        {"text": "More energy comes out than goes in. “You can’t win.”", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 22,
+      "title": "Rapid Round 1 — Ship from ocean heat",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "8",
+      "round": 1,
+      "image": null,
+      "blocks": [{"text": "Ship draws heat from 15 °C ocean and turns all of it into work. No fuel.", "level": 0}],
+      "options": ["Allowed", "Breaks the First Law", "Breaks the Second Law"],
+      "correct": "C",
+      "answers": []
+    },
+    {
+      "id": 23,
+      "title": "Answer 8",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "8",
+      "round": 1,
+      "image": null,
+      "blocks": [
+        {"text": "C. Breaks the Second Law", "level": 0},
+        {"text": "Energy balances, but heat leaves the ocean and work carries no entropy.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 24,
+      "title": "You can’t win; you can’t break even",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "First Law: put 1 J of heat in, you cannot get more than 1 J of work out.", "level": 0},
+        {"text": "Second Law: you cannot even get the full 1 J of work out.", "level": 0}
+      ],
+      "answers": []
+    },
+    {
+      "id": 25,
+      "title": "Carnot limit",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "η ≤ 1 − T_L / T_H", "level": 0},
+        {"text": "Depends only on the two temperatures (in kelvin).", "level": 0}
+      ],
+      "answers": []
+    },
+    {
+      "id": 26,
+      "title": "Inventor claims 70% efficiency (100 J in at 600 K, 70 J work, reject at 300 K)",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "9",
+      "round": 2,
+      "image": null,
+      "blocks": [],
+      "options": ["Is possible", "Violates the Second Law only", "Violates the First Law only", "Violates both laws"],
+      "correct": "B",
+      "answers": []
+    },
+    {
+      "id": 27,
+      "title": "Answer 9",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "9",
+      "round": 2,
+      "image": null,
+      "blocks": [
+        {"text": "B. Violates the Second Law only", "level": 0},
+        {"text": "Energy balances. Carnot limit is 50%. 70% is over it.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 28,
+      "title": "Steam engine between 160 °C and 22 °C. Best possible efficiency?",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "10",
+      "round": 2,
+      "image": null,
+      "blocks": [],
+      "options": ["3%", "32%", "86%", "100%"],
+      "correct": "B",
+      "answers": []
+    },
+    {
+      "id": 29,
+      "title": "Answer 10",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "10",
+      "round": 2,
+      "image": null,
+      "blocks": [
+        {"text": "B. 32%", "level": 0},
+        {"text": "1 − 295/433 ≈ 0.32. Use kelvin.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 30,
+      "title": "Black box 1: heat in at T_H, same heat out at T_L, no work",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "11",
+      "round": 2,
+      "image": null,
+      "blocks": [],
+      "options": ["Possible, always", "Possible only if T_H > T_L", "Impossible: First Law", "Impossible: Second Law"],
+      "correct": "B",
+      "answers": []
+    },
+    {
+      "id": 31,
+      "title": "Answer 11",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "11",
+      "round": 2,
+      "image": null,
+      "blocks": [
+        {"text": "B. Possible only if T_H > T_L", "level": 0},
+        {"text": "Energy balances. With no work, heat only goes hot to cold.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 32,
+      "title": "Black box 3: 1 W heat in, exactly 1 W work out, no heat rejected",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "13",
+      "round": 2,
+      "image": null,
+      "blocks": [],
+      "options": ["Possible, always", "Possible only if T_H > T_L", "Impossible: First Law", "Impossible: Second Law"],
+      "correct": "D",
+      "answers": []
+    },
+    {
+      "id": 33,
+      "title": "Answer 13",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "13",
+      "round": 2,
+      "image": null,
+      "blocks": [
+        {"text": "D. Impossible: breaks the Second Law", "level": 0},
+        {"text": "Energy balances, but all heat became work. “You can’t break even.”", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 34,
+      "title": "Otto cycle, r = 10, γ = 1.4. Ideal efficiency?",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "17",
+      "round": 2,
+      "image": null,
+      "blocks": [],
+      "options": ["25%", "40%", "60%", "90%"],
+      "correct": "C",
+      "answers": []
+    },
+    {
+      "id": 35,
+      "title": "Answer 17",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "17",
+      "round": 2,
+      "image": null,
+      "blocks": [
+        {"text": "C. 60%", "level": 0},
+        {"text": "η = 1 − 1/10^{0.4} ≈ 0.60", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 36,
+      "title": "Heat pump keeps room at 20 °C when outside is 0 °C. Best COP?",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "18",
+      "round": 2,
+      "image": null,
+      "blocks": [],
+      "options": ["1", "7.3", "14.7", "Infinite"],
+      "correct": "C",
+      "answers": []
+    },
+    {
+      "id": 37,
+      "title": "Answer 18",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "18",
+      "round": 2,
+      "image": null,
+      "blocks": [
+        {"text": "C. 14.7", "level": 0},
+        {"text": "COP = 293/20 ≈ 14.65. Most heat comes from outdoors.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 38,
+      "title": "Which statement agrees with the Second Law?",
+      "kind": "vote",
+      "isPoll": true,
+      "letter": "24",
+      "round": 3,
+      "image": null,
+      "blocks": [],
+      "options": ["Heat can never go from cold to hot", "The entropy of any object can never decrease", "Energy gets used up over time", "Entropy of an isolated system never decreases; a local decrease is paid for elsewhere"],
+      "correct": "D",
+      "answers": []
+    },
+    {
+      "id": 39,
+      "title": "Answer 24",
+      "kind": "answer",
+      "isPoll": false,
+      "letter": "24",
+      "round": 3,
+      "image": null,
+      "blocks": [
+        {"text": "D. The entropy of an isolated system never decreases; a local decrease is paid for elsewhere", "level": 0},
+        {"text": "A is false once you add work. B ignores the surroundings. C contradicts the First Law.", "level": 1}
+      ],
+      "answers": []
+    },
+    {
+      "id": 40,
+      "title": "Back to the Sun",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "Earth is not a closed system.", "level": 0},
+        {"text": "The Sun supplies concentrated, low-entropy energy. Earth sends the same amount of energy back, spread out.", "level": 0},
+        {"text": "About 20 low-energy photons leave for every solar photon that arrives.", "level": 0}
+      ],
+      "answers": []
+    },
+    {
+      "id": 41,
+      "title": "Summary",
+      "kind": "lecture",
+      "isPoll": false,
+      "letter": null,
+      "round": null,
+      "image": null,
+      "blocks": [
+        {"text": "Entropy of an isolated system never decreases. S = k ln(Ω).", "level": 0},
+        {"text": "Heat goes from hot to cold unless you pay with work. ΔS ≥ Q/T.", "level": 0},
+        {"text": "Engines: η ≤ 1 − T_L/T_H.", "level": 0},
+        {"text": "Refrigerator: COP < T_L/(T_H − T_L). Heat pump: COP < T_H/(T_H − T_L).", "level": 0}
+      ],
+      "answers": []
+    }
+  ]
+}
