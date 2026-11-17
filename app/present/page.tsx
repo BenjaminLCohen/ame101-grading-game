@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Bar, BarChart, ResponsiveContainer, XAxis } from "recharts";
 import { createClient, GRADES } from "@/utils/supabase/client";
-import { DeckSlide, slides } from "@/components/DeckSlide";
+import { DeckSlide, slides as gradingSlides } from "@/components/DeckSlide";
+import secondLawData from "@/data/second-law.json";
 
 const SESSION_DEFAULT = "class";
+const OPTIONS = ["A", "B", "C", "D"] as const;
 
 type Vote = {
   student_id: string;
@@ -27,6 +29,7 @@ function calledMap(value: unknown): Record<string, string[]> {
 export default function PresentPage() {
   const [supabase] = useState(() => createClient());
   const [sessionId, setSessionId] = useState(SESSION_DEFAULT);
+  const [lesson, setLesson] = useState("grading");
   const [index, setIndex] = useState(0);
   const [showResults, setShowResults] = useState(false);
   const [votes, setVotes] = useState<Vote[]>([]);
@@ -35,11 +38,16 @@ export default function PresentPage() {
   const [origin, setOrigin] = useState("");
   const [error, setError] = useState("");
 
+  const slides = lesson === "second-law" ? (secondLawData.slides as any[]) : gradingSlides;
+  const pollOptions = lesson === "second-law" ? OPTIONS : GRADES;
   const slide = slides[index] ?? slides[0];
 
   useEffect(() => {
-    const q = new URLSearchParams(window.location.search).get("session");
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("session");
     if (q && /^[a-zA-Z0-9_-]{1,40}$/.test(q)) setSessionId(q);
+    const l = params.get("lesson");
+    if (l === "second-law" || l === "grading") setLesson(l);
     setOrigin(window.location.origin);
   }, []);
 
@@ -86,7 +94,7 @@ export default function PresentPage() {
       window.clearInterval(timer);
       void supabase.removeChannel(channel);
     };
-  }, [sessionId, supabase]);
+  }, [sessionId, supabase, slides]);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -142,19 +150,19 @@ export default function PresentPage() {
   }
 
   const volunteers = votes.filter((vote) => vote.volunteer);
-  const voteUrl = origin ? `${origin}/vote?session=${encodeURIComponent(sessionId)}` : "";
-  const histogram = GRADES.map((grade) => ({
-    grade,
-    count: votes.filter((vote) => vote.grade === grade).length,
+  const voteUrl = origin ? `${origin}/vote?session=${encodeURIComponent(sessionId)}&lesson=${lesson}` : "";
+  const histogram = pollOptions.map((opt) => ({
+    grade: opt,
+    count: votes.filter((vote) => vote.grade === opt).length,
   }));
 
   return (
     <div className="presenter">
       <section className="presenter-slide">
-        <DeckSlide slide={slide} index={index} />
+        <DeckSlide slide={slide} index={index} total={slides.length} />
       </section>
       <aside className="rail">
-        <p className="eyebrow">Presenter</p>
+        <p className="eyebrow">Presenter · {lesson === "second-law" ? "Second Law" : "Grading Game"}</p>
         <h2>AME 101</h2>
         <div className="nav">
           <button className="btn" onClick={() => void go(index - 1)} disabled={index === 0}>Prev</button>
@@ -203,7 +211,7 @@ export default function PresentPage() {
             )}
           </>
         ) : (
-          <p className="muted">Lecture slide. Polling opens on the grading examples.</p>
+          <p className="muted">Lecture slide. Polling opens on the interactive slides.</p>
         )}
         {error ? <p className="err">{error}</p> : null}
         <div className="qr">
