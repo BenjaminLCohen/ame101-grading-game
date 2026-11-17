@@ -2,12 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import { createClient, GRADES } from "@/utils/supabase/client";
-import { DeckSlide, slides } from "@/components/DeckSlide";
+import { DeckSlide, slides as gradingSlides } from "@/components/DeckSlide";
+import secondLawData from "@/data/second-law.json";
 import { Bar, BarChart, ResponsiveContainer, XAxis } from "recharts";
+
+const OPTIONS = ["A", "B", "C", "D"] as const;
 
 export default function VotePage() {
   const [supabase] = useState(() => createClient());
   const [sessionId, setSessionId] = useState("class");
+  const [lesson, setLesson] = useState("grading");
   const [studentId, setStudentId] = useState("");
   const [index, setIndex] = useState(0);
   const [showResults, setShowResults] = useState(false);
@@ -20,11 +24,16 @@ export default function VotePage() {
   const [counts, setCounts] = useState<{ grade: string; count: number }[]>([]);
   const dirty = useRef(false);
 
+  const slides = lesson === "second-law" ? (secondLawData.slides as any[]) : gradingSlides;
+  const pollOptions = lesson === "second-law" ? OPTIONS : GRADES;
   const slide = slides[index] ?? slides[0];
 
   useEffect(() => {
-    const q = new URLSearchParams(window.location.search).get("session");
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("session");
     if (q && /^[a-zA-Z0-9_-]{1,40}$/.test(q)) setSessionId(q);
+    const l = params.get("lesson");
+    if (l === "second-law" || l === "grading") setLesson(l);
     let id = localStorage.getItem("ame101-student-id");
     if (!id) {
       id = crypto.randomUUID();
@@ -79,7 +88,7 @@ export default function VotePage() {
           .eq("session_id", sessionId)
           .eq("slide_id", nextSlide.id);
         if (!stop) {
-          setCounts(GRADES.map((g) => ({ grade: g, count: (all || []).filter((row) => row.grade === g).length })));
+          setCounts(pollOptions.map((g) => ({ grade: g, count: (all || []).filter((row) => row.grade === g).length })));
         }
       }
       if (!stop) setError("");
@@ -95,11 +104,11 @@ export default function VotePage() {
       window.clearInterval(timer);
       void supabase.removeChannel(channel);
     };
-  }, [sessionId, studentId, supabase]);
+  }, [sessionId, studentId, supabase, slides, pollOptions]);
 
   async function submit() {
     if (!grade) {
-      setError("Choose a grade first.");
+      setError("Choose an answer first.");
       return;
     }
     if (!slide.isPoll) return;
@@ -125,13 +134,13 @@ export default function VotePage() {
 
   return (
     <main className="vote">
-      <DeckSlide slide={slide} index={index} />
-      {called ? <p className="called">You were called. Come explain your grade.</p> : null}
+      <DeckSlide slide={slide} index={index} total={slides.length} />
+      {called ? <p className="called">You were called. Come explain your answer.</p> : null}
       {slide.isPoll ? (
         <section>
-          <h2>Your grade</h2>
+          <h2>{lesson === "second-law" ? "Your answer" : "Your grade"}</h2>
           <div className="grades">
-            {GRADES.map((option) => (
+            {pollOptions.map((option) => (
               <button
                 key={option}
                 className={grade === option ? "grade on" : "grade"}
@@ -141,7 +150,9 @@ export default function VotePage() {
                   setSaved(false);
                 }}
               >
-                {option}
+                {lesson === "second-law"
+                  ? `${option}. ${slide.options?.[option.charCodeAt(0) - 65] || option}`
+                  : option}
               </button>
             ))}
           </div>
@@ -155,7 +166,7 @@ export default function VotePage() {
                 setSaved(false);
               }}
             />
-            I feel comfortable coming up to explain my grade
+            I feel comfortable coming up to explain my {lesson === "second-law" ? "answer" : "grade"}
           </label>
           <label className="name">
             Name, optional
@@ -187,7 +198,7 @@ export default function VotePage() {
           ) : null}
         </section>
       ) : (
-        <p className="muted">Follow the projector. Grading buttons appear on example slides.</p>
+        <p className="muted">Follow the projector. Voting buttons appear on interactive slides.</p>
       )}
       {error ? <p className="err">{error}</p> : null}
     </main>
