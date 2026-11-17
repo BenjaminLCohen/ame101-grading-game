@@ -1,14 +1,20 @@
-# AME 101 Grading Game
+# AME 101 Interactive Lessons
 
-Interactive presentation for Chapter 8 + live class polling.
+Live phone voting for AME 101 lectures. Same system for every lesson.
+
+## Lessons
+- **Chapter 8 · Grading Game** — `/present?lesson=grading` (default)
+- **Chapter 7 · Second Law** — `/present?lesson=second-law`
+
+Home page lets you pick.
 
 ## Features
-- Presenter view: slide on left, poll controls + histogram on right
-- Student mobile view via QR code
-- Votes queued until "Show Results"
-- Random volunteer picker (can select multiple)
+- Presenter view: slide on left, poll controls + histogram + QR on right
+- Student mobile view via QR code (anonymous browser UUID + optional name)
+- Votes sealed until “Show Results”
+- Random volunteer picker
 - Fully synced: next/prev updates every phone
-- Normal slides (Chapter 8) have only navigation
+- Same Supabase project for all lessons
 
 ## Setup
 
@@ -23,16 +29,15 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000/present for presenter.
-Student URL is shown as QR code.
+Open http://localhost:3000 for the lesson picker.
 
 ## Deploy
 Push to GitHub, connect to Vercel, add the two NEXT_PUBLIC_ env vars.
 
 ## Notes
-- Session ID is hardcoded to "class" for simplicity. Change if running multiple sessions.
-- Students are anonymous (browser UUID) + optional name for volunteers.
-- Images from the original PPT are expected in `public/images/` (see extracted files).
+- Session ID defaults to “class”. Add `?session=yourname` for multiple rooms.
+- Students stay anonymous (browser UUID) unless they volunteer a name.
+- Add new lessons by dropping a JSON file in `data/` and wiring it in the present/vote pages.
 
-## Original PPT
-Converted from AME101_Ch8_and_Grading_Game.pptx
+Original grading game from AME101_Ch8_and_Grading_Game.pptx.
+Second Law from AME101_Entropy_Lecture_v12.pptx.
